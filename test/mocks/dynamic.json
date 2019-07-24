@@ -1,0 +1,30 @@
+{
+  "name": "dynamic_segment",
+  "output_variable": "total_weight",
+  "ruleset": [
+    {
+      "rule_name": "rule_0",
+      "condition_test": "RANGE",
+      "value_minimum": "dynamic_interest_rate_min",
+      "value_minimum_type": "variable",
+      "value_maximum": "dynamic_interest_rate_max",
+      "value_maximum_type": "variable",
+      "variable_name": "calculated_interest_rate",
+      "condition_output": {
+        "weight": 500
+      }
+    },  {
+      "rule_name": "rule_1",
+      "condition_test": "EQUAL",
+      "value_comparison": true,
+      "value_comparison_type": "value",
+      "variable_name": "is_employed",
+      "condition_output": {
+        "weight": "dynamic_weight"
+      },
+      "condition_output_types": {
+        "weight": "variable"
+      }
+    }
+  ]
+}

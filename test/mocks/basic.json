@@ -1,0 +1,60 @@
+{
+  "name": "basic_segment",
+  "output_variable": "total_weight",
+  "ruleset": [
+    {
+      "rule_name": "rule_0",
+      "variable_name": "constant",
+      "condition_output": {
+        "weight": 100
+      }
+    },
+    {
+      "rule_name": "rule_1",
+      "condition_test": "GT",
+      "value_comparison": 18,
+      "value_comparison_type": "value",
+      "variable_name": "age",
+      "condition_output": {
+        "weight": 10
+      }
+    },
+    {
+      "rule_name": "rule_2",
+      "condition_test": "CAP",
+      "value_comparison": 0.2,
+      "value_comparison_type": "value",
+      "variable_name": "debt_to_income",
+      "condition_output": {
+        "weight": 20
+      }
+    },
+    {
+      "rule_name": "rule_3",
+      "condition_test": "IN",
+      "value_comparison": [
+        "CA",
+        "NJ",
+        "NY",
+        "MA"
+      ],
+      "value_comparison_type": "value",
+      "variable_name": "applicant_state",
+      "condition_output": {
+        "weight": 30
+      }
+    },
+    {
+      "rule_name": "rule_4",
+      "condition_test": "RANGE",
+      "value_minimum": 40000,
+      "value_minimum_type": "value",
+      "value_maximum": 200000,
+      "value_maximum_type": "value",
+      "variable_name": "income",
+      "condition_output": {
+        "weight": 40
+      }
+    }
+  ]
+}

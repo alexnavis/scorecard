@@ -1,0 +1,6 @@
+{
+  "name": "default_segment",
+  "output_variable": "sum_weight",
+  "ruleset": [
+  ]
+}
